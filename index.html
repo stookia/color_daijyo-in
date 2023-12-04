@@ -67,10 +67,11 @@
 	
 	<script>
 		function click(){
-			const color=document.getElementById(this.id).value;
-			const code=document.getElementsByClassName("chose_color").value;
-			code=color;
+			const color=document.getElementById(this.id);
+			const code=document.getElementsByClassName("chose_color");
+			code.value=color.value;
 			localStorage.setItem(color,color);
+			console(color.value);
 		} 
 	</script>
 </body>
