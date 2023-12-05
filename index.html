@@ -74,6 +74,13 @@
 			const test=localstrage.getItem(color);
 			console.log(test);
 		} 
+		function test(){
+			console.log(test);
+			code.value=color.value;
+			localStorage.setItem(color,color);
+			const test=localstrage.getItem(color);
+		}
+		document.getElementByClassName("button").addEventListener(onclick,test(););
 	</script>
 </body>
 </html>
