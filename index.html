@@ -71,7 +71,8 @@
 			const code=document.getElementsByClassName("chose_color");
 			code.value=color.value;
 			localStorage.setItem(color,color);
-			console.log(color.value);
+			const test=localstrage.getItem(color);
+			console.log(test);
 		} 
 	</script>
 </body>
