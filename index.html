@@ -66,16 +66,6 @@
 	</p>
 	
 	<script>
-		function click(){
-			const color=document.getElementById(this.id);
-			const code=document.getElementsByClassName("chose_color");
-			code.value=color.value;
-			localStorage.setItem(color,color);
-			const test=localstrage.getItem(color);
-			console.log(test);
-		} 
-		
-
 		  var clickedButtons = [];
 
 		  // ボタンがクリックされたときの関数
@@ -83,15 +73,6 @@
 			clickedButtons.push(buttonId);
 			console.log("Clicked buttons:", clickedButtons);
 		  }
-
-		
-		function test(){
-			console.log(test);
-			code.value=color.value;
-			localStorage.setItem(color,color);
-			const test=localstrage.getItem(color);
-		}
-		document.getElementByClassName("button").addEventListener(onclick,test(););
 	</script>
 </body>
 </html>
