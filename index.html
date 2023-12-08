@@ -7,6 +7,33 @@
 </head>
 
 <body>
+	<script>
+		function click(){
+			const color=document.getElementById(this.id);
+			const code=document.getElementsByClassName('chose_color');
+			code.value=color.value;
+			localStorage.setItem(color,color);
+			const test=localstrage.getItem(color);
+			console.log(test);
+		} 
+		
+
+		  var clickedButtons = [];
+
+		  function ButtonClick(buttonId) {
+			clickedButtons.push(buttonId);
+			console.log('Clicked buttons:", clickedButtons);
+		  }
+
+		
+		function test(){
+			console.log(test);
+			code.value=color.value;
+			localStorage.setItem(color,color);
+			const test=localstrage.getItem(color);
+		}
+	</script>
+	
 	<p class="spot">〇〇〇〇〇</p>
 	<p class="que">この場所で感じた「気持ち」の色を選んで下さい。</p>
 	
@@ -66,31 +93,5 @@
 		です。
 	</p>
 	
-	<script>
-		function click(){
-			const color=document.getElementById(this.id);
-			const code=document.getElementsByClassName('chose_color');
-			code.value=color.value;
-			localStorage.setItem(color,color);
-			const test=localstrage.getItem(color);
-			console.log(test);
-		} 
-		
-
-		  var clickedButtons = [];
-
-		  function ButtonClick(buttonId) {
-			clickedButtons.push(buttonId);
-			console.log('Clicked buttons:", clickedButtons);
-		  }
-
-		
-		function test(){
-			console.log(test);
-			code.value=color.value;
-			localStorage.setItem(color,color);
-			const test=localstrage.getItem(color);
-		}
-	</script>
 </body>
 </html>
