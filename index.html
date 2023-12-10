@@ -83,7 +83,8 @@
       console.log(storedColor);
 
 	const url = document.getElementById('next').href;
-		url = url + color.substring(1);
+	const col = localStrage.getItem('daijoin');
+		url = url + col.substring(1);
     }
   </script>
 </body>
