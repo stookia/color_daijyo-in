@@ -7,8 +7,8 @@
 </head>
 
 <body>
-  <p class="spot">〇〇〇〇〇</p>
-  <p class="que">この場所で感じた「気持ち」の色を選んで下さい。</p>
+  	<p class="spot">名勝 旧大乗院庭園<br>Former Daijo-in Temple Garden</p>
+  	<p class="que">この場所で感じた「気持ち」の色を選んで下さい。</p>
 
         <button class="button" id="1" type="button" onclick="clickButton(this)" style="background-color: #B91C31" value="#b91c31"></button>
 	<button class="button" id="2" type="button" onclick="clickButton(this)" style="background-color: #FD7E00" value="#df7e00"></button>
@@ -60,22 +60,27 @@
 	<button class="button" id="48" type="button" onclick="clickButton(this)" style="background-color: #05090E" value="#05090e"></button>
 	<button class="button" id="49" type="button" onclick="clickButton(this)" style="background-color: #291333" value="#291333"></button><br>
 
-  <p class="que">
-    あなたが選んだ色は
-    <input class="chosen_color" type="text" value="#000000">
-    です。
-  </p>
-
-  <script>
-    function clickButton(button) {
-      const color = button.value;
-      const chosenColorInput = document.querySelector('.chosen_color');
-      chosenColorInput.value = color;
-
-      // ローカルストレージにボタンIDと選択された色を保存
-      localStorage.setItem(button.id, color);
-
-      // ローカルストレージから色を取得してコンソールに出力
+  	<p class="que">
+    	あなたが選んだ色は
+    	<input class="chosen_color" type="text" value="#000000">
+    	です。
+  	</p>
+	<a id="next" href="https://docs.google.com/forms/d/e/1FAIpQLSdI8Hr6e1xDd69Oa3Supw75m8cPxLXn-K1dnuMayhCKi9CZGQ/viewform?usp=pp_url&entry.216703220=%23">次へ</a>
+ 	<script>
+    	function clickButton(button) {
+	 	
+      	const color = button.value;
+      	const chosenColorInput = document.querySelector('.chosen_color');
+		
+      	chosenColorInput.value = color;
+		
+      	// ローカルストレージにボタンIDと選択された色を保存
+      	localStorage.setItem(button.id, color);
+		
+		const url = document.getElementById('next').href;
+		url = url + color.substring(2);
+		
+      	// ローカルストレージから色を取得してコンソールに出力
       const storedColor = localStorage.getItem(button.id);
       console.log(`Button ${button.id}: ${storedColor}`);
     }
