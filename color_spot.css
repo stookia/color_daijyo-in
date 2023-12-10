@@ -23,13 +23,6 @@ button {
   color: #FFFFFF;
 }
 
-
-@media (any-hover: hover) {
-  .buttonBasic {
-    transition: background-color 0.2s;
-  }
-
-  .buttonBasic:hover {
-    border-color: #9B9B9B;
-  }
+button:active {
+  border-color: #ff0000;
 }
