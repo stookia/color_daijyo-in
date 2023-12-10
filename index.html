@@ -76,14 +76,14 @@
       	chosenColorInput.value = color;
 	
       	// ローカルストレージにボタンIDと選択された色を保存
-      	localStorage.setItem('daijoin', color);
+      	localstorage.setItem('daijoin', color);
 		
       	// ローカルストレージから色を取得してコンソールに出力
-      const storedColor = localStorage.getItem('daijoin');
+      const storedColor = localstorage.getItem('daijoin');
       console.log(storedColor);
 
 	const url = document.getElementById('next');
-	const col = localStrage.getItem('daijoin');
+	const col = localstrage.getItem('daijoin');
 		url.href = url.href + col.substring(1);
     }
   </script>
