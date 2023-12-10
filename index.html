@@ -75,14 +75,14 @@
       	chosenColorInput.value = color;
 		
       	// ローカルストレージにボタンIDと選択された色を保存
-      	localStorage.setItem(button.id, color);
+      	localStorage.setItem(daijoin, color);
 		
 		const url = document.getElementById('next').href;
 		url = url + color.substring(2);
 		
       	// ローカルストレージから色を取得してコンソールに出力
-      const storedColor = localStorage.getItem(button.id);
-      console.log(`Button ${button.id}: ${storedColor}`);
+      const storedColor = localStorage.getItem(daijoin);
+      console.log(`Button : ${storedColor}`);
     }
   </script>
 </body>
