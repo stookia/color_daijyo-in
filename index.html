@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Color Spot</title>
-  <link rel="stylesheet" href="color_spot.css" type="text/css">
+  <link href="color_spot.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<div class="main">
   	<p class="spot">名勝 旧大乗院庭園<br>Former Daijo-in Temple Garden</p>
   	<p class="que">この場所で感じた「気持ち」の色を選んで下さい。</p>
-
-        <button class="button" id="1" type="button" onclick="clickButton(this)" style="background-color: #B91C31" value="#b91c31"></button>
+	
+    <button class="button" id="1" type="button" onclick="clickButton(this)" style="background-color: #B91C31" value="#b91c31"></button>
 	<button class="button" id="2" type="button" onclick="clickButton(this)" style="background-color: #FD7E00" value="#df7e00"></button>
 	<button class="button" id="3" type="button" onclick="clickButton(this)" style="background-color: #ffbe00" value="#ffbe00"></button>
 	<button class="button" id="4" type="button" onclick="clickButton(this)" style="background-color: #4db56a" value="#4db56a"></button>
@@ -63,6 +63,7 @@
 
   	<p class="que">
     	あなたが選んだ色は
+		<div class="box" style="background-color: #3C3CDC;"></div><br>
     	<input class="chosed_color" type="text" value="#000000">
     	です。
   	</p>
@@ -72,9 +73,11 @@
     	function clickButton(button) {
 	 	
       	const color = button.value;
+		const chageColor = "background-color: "+ color;
       	const chosenColorInput = document.querySelector('.chosed_color');
 		
       	chosenColorInput.value = color;
+		document.getElementByClassName('box').style=chageColor;
 	
       	// ローカルストレージにボタンIDと選択された色を保存
       	localStorage.setItem('daijoin', color);
