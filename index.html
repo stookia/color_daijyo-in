@@ -76,11 +76,7 @@
       	chosenColorInput.value = color;
 		
       	// ローカルストレージにボタンIDと選択された色を保存
-      	localStorage.setItem(daijoin, color);
-		
-		const url = document.getElementByClassName('Gframe');
-		const col = color.substring(1);
-		url.src = url.src + col;
+      	localStorage.setItem('daijoin', color);
 		
       	// ローカルストレージから色を取得してコンソールに出力
       const storedColor = localStorage.getItem('daijoin');
