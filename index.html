@@ -82,9 +82,9 @@
       const storedColor = localStorage.getItem('daijoin');
       console.log(storedColor);
 
-	const url = document.getElementById('next').href;
+	const url = document.getElementById('next');
 	const col = localStrage.getItem('daijoin');
-		url = url + col.substring(1);
+		url.href = url.href + col.substring(1);
     }
   </script>
 </body>
