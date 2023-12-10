@@ -1,7 +1,13 @@
 @charset "utf-8";
 
 .main {
-  margine: 0 auto;
+	margin: auto;
+	width: 400px;
+}
+
+.box {
+	width: 70px;
+  	height: 35px; 
 }
 
 button {
@@ -19,7 +25,6 @@ button {
   display: ;
   width: 50px;
   height: 25px;
-  padding: ;
   color: #FFFFFF;
 }
 
