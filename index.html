@@ -81,6 +81,12 @@
 		const col = color.substring(1);
 		url.href = url.href + col;
 		alert(color.substring(2));
+
+	for (var i = 0; i < localStorage.length; i++){
+    var key = localStorage.key(i);
+    var value = localStorage.getItem(key);
+    console.log(`${key}: ${value}`);
+}
 		
       	// ローカルストレージから色を取得してコンソールに出力
       const storedColor = localStorage.getItem('daijoin');
