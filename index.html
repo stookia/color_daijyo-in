@@ -62,7 +62,7 @@
 
   	<p class="que">
     	あなたが選んだ色は
-    	<input id="chosed_color" type="text" value="#000000">
+    	<input class="chosed_color" type="text" value="#000000">
     	です。
   	</p>
 	<a id="next" href="https://docs.google.com/forms/d/e/1FAIpQLSdI8Hr6e1xDd69Oa3Supw75m8cPxLXn-K1dnuMayhCKi9CZGQ/viewform?usp=pp_url&entry.216703220=%23">次へ</a>
@@ -70,7 +70,7 @@
     	function clickButton(button) {
 	 	
       	const color = button.value;
-      	const chosenColorInput = document.getElementsById('chosed_color');
+      	const chosenColorInput = document.querySelector('.chosed_color');
 		
       	chosenColorInput.value = color;
 		
