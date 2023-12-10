@@ -7,6 +7,7 @@
 </head>
 
 <body>
+	<div>
   	<p class="spot">名勝 旧大乗院庭園<br>Former Daijo-in Temple Garden</p>
   	<p class="que">この場所で感じた「気持ち」の色を選んで下さい。</p>
 
@@ -65,8 +66,8 @@
     	<input class="chosed_color" type="text" value="#000000">
     	です。
   	</p>
-	<a id="next" onclick="changeUrl()" href="https://stookia.github.io/color_daijo-in-select_color/">次へ</a><br>
- 	<iframe class="Gfrom" src="https://docs.google.com/forms/d/e/1FAIpQLSdI8Hr6e1xDd69Oa3Supw75m8cPxLXn-K1dnuMayhCKi9CZGQ/viewform?usp=pp_url&entry.216703220=%23"></iframe>
+	<a href="https://stookia.github.io/color_daijo-in-select_color/">次へ</a>
+ 	</div>
 	<script>
     	function clickButton(button) {
 	 	
@@ -77,10 +78,6 @@
 	
       	// ローカルストレージにボタンIDと選択された色を保存
       	localStorage.setItem('daijoin', color);
-		
-      	// ローカルストレージから色を取得してコンソールに出力
-      	const storedColor = localStorage.getItem('daijoin');
-      	console.log(storedColor);
 	}
   </script>
 </body>
