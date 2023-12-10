@@ -65,7 +65,7 @@
     	<input class="chosed_color" type="text" value="#000000">
     	です。
   	</p>
-	<a id="next" href="https://docs.google.com/forms/d/e/1FAIpQLSdI8Hr6e1xDd69Oa3Supw75m8cPxLXn-K1dnuMayhCKi9CZGQ/viewform?usp=pp_url&entry.216703220=%23">次へ</a><br>
+	<a id="next" onclick="changeUrl()"" href="https://docs.google.com/forms/d/e/1FAIpQLSdI8Hr6e1xDd69Oa3Supw75m8cPxLXn-K1dnuMayhCKi9CZGQ/viewform?usp=pp_url&entry.216703220=%23">次へ</a><br>
  	<iframe class="Gfrom" src="https://docs.google.com/forms/d/e/1FAIpQLSdI8Hr6e1xDd69Oa3Supw75m8cPxLXn-K1dnuMayhCKi9CZGQ/viewform?usp=pp_url&entry.216703220=%23"></iframe>
 	<script>
     	function clickButton(button) {
@@ -79,13 +79,15 @@
       	localStorage.setItem('daijoin', color);
 		
       	// ローカルストレージから色を取得してコンソールに出力
-      const storedColor = localStorage.getItem('daijoin');
-      console.log(storedColor);
+      	const storedColor = localStorage.getItem('daijoin');
+      	console.log(storedColor);
+	}
 
-	const url = document.getElementById('next');
-	const col = localStorage.getItem('daijoin');
+	function changeUrl {
+		const url = document.getElementById('next');
+		const col = localStorage.getItem('daijoin');
 		url.href = url.href + col.substring(1);
-    }
+	}
   </script>
 </body>
 </html>
