@@ -63,7 +63,7 @@
 
   	<p class="que">
     	あなたが選んだ色は
-		<div class="box" style="background-color: #3C3CDC;"></div><br>
+	<div class="box" style="background-color: #3C3CDC;"></div><br>
     	<input class="chosed_color" type="text" value="#000000">
     	です。
   	</p>
@@ -72,12 +72,13 @@
 	<script>
     	function clickButton(button) {
 	 	
-      	const color = button.value;
-		const chageColor = "background-color: "+ color;
-      	const chosenColorInput = document.querySelector('.chosed_color');
+      		const color = button.value;
+		const changeColor = "background-color: "+ color;
+      		const chosenColorInput = document.querySelector('.chosed_color');
 		
-      	chosenColorInput.value = color;
-		document.getElementByClassName('box').style=chageColor;
+      		chosenColorInput.value = color;
+		document.getElementByClassName('box').style = changeColor;
+		console.log(changeColor);
 	
       	// ローカルストレージにボタンIDと選択された色を保存
       	localStorage.setItem('daijoin', color);
